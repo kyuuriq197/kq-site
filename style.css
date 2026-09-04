@@ -1,124 +1,183 @@
-{
-box-sizing: border-box;
+* {
+    box-sizing: border-box;
 }
+
+:root {
+    /* Background */
+    --cream: #fff8e7;
+    --beige: #f3e3c3;
+    --light-beige: #ead3ad;
+
+    /* Yellow */
+    --yellow-light: #fff3a6;
+    --yellow: #ffd447;
+    --gold: #e5a900;
+
+    /* Orange */
+    --orange-light: #ffc078;
+    --orange: #f47c20;
+    --orange-dark: #d95a00;
+
+    /* Red */
+    --red-light: #ff8070;
+    --red: #e53935;
+    --red-dark: #b71c1c;
+
+    /* Burgundy */
+    --burgundy-light: #8f3030;
+    --burgundy: #681c24;
+    --burgundy-dark: #45131a;
+
+    /* Text */
+    --text: #351b18;
+    --text-light: #70463b;
+    --white: #fffdf7;
+}
+
 body {
-margin: 0;
-padding: 0;
-background: #00ff91;
-color: #e5ff00;
+    margin: 0;
+    padding: 0;
 
-font-family: "Comic Sans MS", "Courier New", monospace;
+    background: var(--cream);
+    color: var(--text);
 
-min-height: 100vh;
+    font-family: "Comic Sans MS", "Courier New", monospace;
+
+    min-height: 100vh;
 }
+
 .container {
-width: 90%;
-max-width: 800px;
-margin: 0 auto;
-padding: 30px 0 50px;
+    width: 90%;
+    max-width: 800px;
+
+    margin: 0 auto;
+    padding: 30px 0 50px;
 }
+
 h1 {
-text-align: center;
-font-size: 70px;
-margin: 20px 0 0;
+    text-align: center;
 
-color: #ff0000;
+    font-size: 70px;
+    margin: 20px 0 0;
 
-text-shadow:
-    5px 5px 0 #611e16,
-    -5px -5px 0 #ffa200;
+    color: var(--red);
 
-transform: rotate(-2deg);
+    text-shadow:
+        5px 5px 0 var(--burgundy),
+        -5px -5px 0 var(--yellow);
+
+    transform: rotate(-2deg);
 }
+
 .subtitle {
-text-align: center;
-color: #f7fda8;
-font-size: 18px;
+    text-align: center;
 
-margin-bottom: 40px;
+    color: var(--orange-dark);
+
+    font-size: 18px;
+
+    margin-bottom: 40px;
 }
+
 .box {
-border: 5px dashed #00ffff;
-background: #111111;
+    border: 5px dashed var(--orange);
 
-padding: 20px;
-margin: 25px 0;
+    background: var(--white);
 
-box-shadow:
-    8px 8px 0 #ff002b,
-    -5px -5px 0 #ffff00;
+    padding: 20px;
+    margin: 25px 0;
+
+    box-shadow:
+        8px 8px 0 var(--red),
+        -5px -5px 0 var(--yellow);
 }
+
 .box h2 {
-margin-top: 0;
-color: #00ffae;
+    margin-top: 0;
 
-text-decoration: underline;
+    color: var(--burgundy);
+
+    text-decoration: underline;
 }
+
 .box p {
-line-height: 1.7;
+    line-height: 1.7;
 }
+
 .button {
-display: block;
-margin: 15px 0;
-padding: 15px;
+    display: block;
 
-background: #ffff00;
-color: #000000;
+    margin: 15px 0;
+    padding: 15px;
 
-border: 4px solid #ff00ff;
+    background: var(--yellow);
+    color: var(--text);
 
-text-align: center;
-text-decoration: none;
+    border: 4px solid var(--red);
 
-font-size: 20px;
-font-weight: bold;
+    text-align: center;
+    text-decoration: none;
 
-box-shadow: 6px 6px 0 #00ffff;
+    font-size: 20px;
+    font-weight: bold;
 
-transition: 0.1s;
+    box-shadow: 6px 6px 0 var(--orange);
+
+    transition: 0.1s;
 }
+
 .button:hover {
-background: #00ffff;
-transform: translate(4px, 4px);
+    background: var(--orange);
 
-box-shadow: 2px 2px 0 #ff00ff;
+    color: var(--white);
+
+    transform: translate(4px, 4px);
+
+    box-shadow: 2px 2px 0 var(--burgundy);
 }
+
 a {
-color: #00ffff;
+    color: var(--red-dark);
 }
+
 .warning {
-margin: 35px 0;
-padding: 20px;
+    margin: 35px 0;
+    padding: 20px;
 
-text-align: center;
+    text-align: center;
 
-border: 5px solid red;
+    border: 5px solid var(--burgundy);
 
-background: #330000;
+    background: var(--beige);
 
-color: #ff4444;
+    color: var(--red-dark);
 
-font-size: 24px;
-font-weight: bold;
+    font-size: 24px;
+    font-weight: bold;
 
-animation: blink 0.8s infinite alternate;
+    animation: blink 0.8s infinite alternate;
 }
+
 @keyframes blink {
-from {
-opacity: 1;
+    from {
+        opacity: 1;
+    }
+
+    to {
+        opacity: 0.45;
+    }
 }
-to {
-    opacity: 0.45;
-}
-}
+
 footer {
-text-align: center;
-margin-top: 50px;
+    text-align: center;
 
-color: #777777;
+    margin-top: 50px;
 
-font-size: 14px;
+    color: var(--text-light);
+
+    font-size: 14px;
 }
+
 footer span {
-color: #ff00ff;
+    color: var(--burgundy);
 }
