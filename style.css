@@ -156,11 +156,12 @@ a {
     font-weight: bold;
 
     animation: blink 0.8s infinite alternate;
+
 }
 
 @keyframes blink {
     from {
-        opacity: 1;
+        opacity: 0.65;
     }
 
     to {
