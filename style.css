@@ -148,9 +148,9 @@ a {
 
     border: 5px solid var(--burgundy);
 
-    background: var(--red);
+    background: var(--yellow);
 
-    color: var(--red-dark);
+    color: var(--burgundy-dark);
 
     font-size: 24px;
     font-weight: bold;
