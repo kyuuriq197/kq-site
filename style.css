@@ -4,61 +4,84 @@
 
 :root {
     /* Background */
-    --olive: #808000;
-    --oldlace: #fdf5e6;
-    --light-beige: #ead3ad;
+    --bg: #c91616;
+    --bg-dark: #9e1010;
+
+    /* Paper */
+    --paper: #f3ead8;
+    --paper-light: #faf3e5;
 
     /* Yellow */
-    --yellow-light: #fff3a6;
-    --yellow: #ffd447;
-    --gold: #e5a900;
+    --yellow: #f4df00;
+    --yellow-dark: #d3b900;
 
-    /* Orange */
-    --orange-light: #ffc078;
-    --orange: #f47c20;
-    --orange-dark: #d95a00;
-
-    /* Red */
-    --red-light: #ff8070;
-    --red: #e53935;
-    --red-dark: #b71c1c;
-
-    /* Burgundy */
-    --burgundy-light: #8f3030;
-    --burgundy: #681c24;
-    --burgundy-dark: #45131a;
+    /* Red / Burgundy */
+    --red: #d92820;
+    --red-dark: #861817;
+    --burgundy: #54151b;
 
     /* Text */
-    --text: #351b18;
-    --text-light: #70463b;
-    --white: #fffdf7;
+    --text: #251616;
+    --text-muted: #704b43;
+
+    /* Accent */
+    --orange: #e76517;
 }
+
+
+/* =========================
+   BASE
+   ========================= */
 
 body {
     margin: 0;
-    padding: 0;
+    min-height: 100vh;
 
-    background: var(--orange-dark);
     color: var(--text);
 
-    font-family: "Iosevka Fixed Extrabold", "Iosevka Fixed extrabild", monospace;
+    font-family:
+        "Iosevka Fixed Extrabold",
+        "Iosevka Fixed Extrabold",
+        monospace;
 
-    min-height: 100vh;
+    background:
+        radial-gradient(
+            circle at 50% 0%,
+            #e62a1d 0%,
+            var(--bg) 45%,
+            var(--bg-dark) 100%
+        );
+
+    overflow-x: hidden;
 }
+
+
+/* =========================
+   CONTAINER
+   ========================= */
 
 .container {
-    width: 90%;
-    max-width: 800px;
+    width: min(90%, 800px);
 
     margin: 0 auto;
-    padding: 30px 0 50px;
+
+    padding: 35px 0 60px;
 }
 
+
+/* =========================
+   HEADER
+   ========================= */
+
 h1 {
+    position: relative;
+
+    margin: 15px 0 5px;
+
     text-align: center;
 
-    font-size: 70px;
-    margin: 20px 0 0;
+    font-size: clamp(52px, 10vw, 82px);
+    line-height: 1;
 
     color: var(--red);
 
@@ -67,53 +90,121 @@ h1 {
         -5px -5px 0 var(--yellow);
 
     transform: rotate(-2deg);
+
+    letter-spacing: -4px;
 }
 
 .subtitle {
+    margin: 18px 0 45px;
+
     text-align: center;
 
-    color: var(--light-beige);
+    color: #f2d9a5;
 
-    font-size: 18px;
-
-    margin-bottom: 40px;
+    font-size: 16px;
 }
+
+
+/* =========================
+   BOXES
+   ========================= */
 
 .box {
-    border: 5px dashed var(--orange);
+    position: relative;
 
-    background: var(--light-beige);
+    margin: 30px 0;
 
-    padding: 20px;
-    margin: 25px 0;
+    padding: 24px;
+
+    background:
+        linear-gradient(
+            rgba(255,255,255,0.18) 1px,
+            transparent 1px
+        ),
+        var(--paper);
+
+    background-size: 100% 4px;
+
+    border: 4px solid var(--red-dark);
 
     box-shadow:
-        8px 8px 0 var(--red),
-        -5px -5px 0 var(--yellow);
+        7px 7px 0 var(--yellow),
+        -5px -5px 0 var(--orange);
+
+    /* Slightly irregular retro look */
+    transform: rotate(-0.25deg);
 }
 
+
+/* Different tilt for every second box */
+
+.box:nth-of-type(2n) {
+    transform: rotate(0.35deg);
+}
+
+
+/* =========================
+   HEADINGS
+   ========================= */
+
 .box h2 {
-    margin-top: 0;
+    margin: 0 0 20px;
 
     color: var(--burgundy);
 
+    font-size: 23px;
+
     text-decoration: underline;
+    text-decoration-thickness: 2px;
+    text-underline-offset: 4px;
 }
 
 .box p {
+    margin: 12px 0;
+
     line-height: 1.7;
 }
+
+
+/* =========================
+   LINKS
+   ========================= */
+
+a {
+    color: var(--red-dark);
+
+    font-weight: bold;
+
+    text-decoration-thickness: 2px;
+    text-underline-offset: 3px;
+
+    transition:
+        color 0.12s ease,
+        background 0.12s ease;
+}
+
+a:hover {
+    color: var(--burgundy);
+
+    background: var(--yellow);
+}
+
+
+/* =========================
+   SOCIAL BUTTONS
+   ========================= */
 
 .button {
     display: block;
 
-    margin: 15px 0;
-    padding: 15px;
+    margin: 18px 0;
+    padding: 15px 18px;
 
     background: var(--yellow);
+
     color: var(--text);
 
-    border: 4px solid var(--red);
+    border: 4px solid var(--red-dark);
 
     text-align: center;
     text-decoration: none;
@@ -121,64 +212,127 @@ h1 {
     font-size: 20px;
     font-weight: bold;
 
-    box-shadow: 6px 6px 0 var(--orange);
+    box-shadow:
+        6px 6px 0 var(--orange);
 
-    transition: 0.1s;
+    transition:
+        transform 0.12s ease,
+        box-shadow 0.12s ease,
+        background 0.12s ease;
 }
 
 .button:hover {
-    background: var(--orange);
+    background: #ffe84d;
 
-    color: var(--white);
+    color: var(--text);
 
     transform: translate(4px, 4px);
 
-    box-shadow: 2px 2px 0 var(--burgundy);
+    box-shadow:
+        2px 2px 0 var(--burgundy);
 }
 
-a {
-    color: var(--red-dark);
+.button:active {
+    transform: translate(6px, 6px);
+
+    box-shadow: none;
 }
+
+
+/* =========================
+   WARNING
+   ========================= */
 
 .warning {
-    margin: 35px 0;
-    padding: 20px;
+    margin: 45px 0 30px;
+    padding: 19px;
 
     text-align: center;
-
-    border: 5px solid var(--burgundy);
 
     background: var(--yellow);
 
     color: var(--text);
 
-    font-size: 24px;
+    border: 4px solid var(--burgundy);
+
+    box-shadow:
+        7px 7px 0 var(--burgundy);
+
+    font-size: clamp(18px, 4vw, 24px);
     font-weight: bold;
 
-    animation: blink 0.8s infinite alternate;
-
+    transform: rotate(0.5deg);
 }
 
-@keyframes blink {
-    from {
-        opacity: 0.65;
-    }
 
-    to {
-        opacity: 0.75;
-    }
-}
+/* =========================
+   FOOTER
+   ========================= */
 
 footer {
+    margin-top: 60px;
+
     text-align: center;
 
-    margin-top: 50px;
+    color: #e5c891;
 
-    color: var(--text-light);
+    font-size: 13px;
 
-    font-size: 14px;
+    line-height: 1.6;
 }
 
 footer span {
-    color: var(--burgundy);
+    color: #9b332f;
+}
+
+
+/* =========================
+   MOBILE
+   ========================= */
+
+@media (max-width: 600px) {
+
+    .container {
+        width: 88%;
+
+        padding-top: 25px;
+    }
+
+    h1 {
+        font-size: 58px;
+
+        text-shadow:
+            4px 4px 0 var(--burgundy),
+            -4px -4px 0 var(--yellow);
+    }
+
+    .subtitle {
+        font-size: 14px;
+
+        margin-bottom: 35px;
+    }
+
+    .box {
+        padding: 19px;
+
+        border-width: 3px;
+
+        box-shadow:
+            5px 5px 0 var(--yellow),
+            -4px -4px 0 var(--orange);
+    }
+
+    .box h2 {
+        font-size: 20px;
+    }
+
+    .button {
+        font-size: 18px;
+
+        padding: 14px;
+    }
+
+    .warning {
+        font-size: 18px;
+    }
 }
