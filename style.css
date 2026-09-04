@@ -4,8 +4,8 @@
 
 :root {
     /* Background */
-    --cream: #fff5dd;
-    --bron-dark: #7b5537;
+    --olive: #808000;
+    --oldlace: #fdf5e6;
     --light-beige: #ead3ad;
 
     /* Yellow */
@@ -38,10 +38,10 @@ body {
     margin: 0;
     padding: 0;
 
-    background: var(--cream);
+    background: var(--orange-dark);
     color: var(--text);
 
-    font-family: "Comic Sans MS", "Courier New", monospace;
+    font-family: "Iosevka Fixed Extrabold", "Iosevka Fixed extrabild", monospace;
 
     min-height: 100vh;
 }
@@ -72,7 +72,7 @@ h1 {
 .subtitle {
     text-align: center;
 
-    color: var(--orange-dark);
+    color: var(--light-beige);
 
     font-size: 18px;
 
@@ -82,7 +82,7 @@ h1 {
 .box {
     border: 5px dashed var(--orange);
 
-    background: var(--white);
+    background: var(--light-beige);
 
     padding: 20px;
     margin: 25px 0;
@@ -148,7 +148,7 @@ a {
 
     border: 5px solid var(--burgundy);
 
-    background: var(--beige);
+    background: var(--red);
 
     color: var(--red-dark);
 
@@ -164,7 +164,7 @@ a {
     }
 
     to {
-        opacity: 0.45;
+        opacity: 0.75;
     }
 }
 
