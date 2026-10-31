@@ -1,55 +1,57 @@
-export interface SocialLink {
-  id: string;
-  platform: string;
-  label: string;
-  url: string;
-  enabled: boolean;
-}
-
 export interface Project {
-  label: string;
+  name: string;
+  description: string;
   url: string;
+  language: string;
+  category: string;
 }
 
 export interface ProfileConfig {
   username: string;
-  handle: string;
-  bio: string;
-  uid: string;
-  status: { enabled: boolean; type: string; text: string };
   avatar: string;
   background: string;
-  theme: { accent: string; socialColor: string };
-  effects: { snowfall: boolean; animations: boolean; glow: boolean; parallax: boolean };
-  socialLinks: SocialLink[];
   projects: Project[];
-  copyButtons: { discord?: string; telegram?: string };
-  music: { enabled: boolean; source: string; title: string };
-  views: { enabled: boolean; mode: 'local' | 'backend'; backendUrl?: string };
 }
 
 export const profile: ProfileConfig = {
   username: 'kyuuriq',
-  handle: '@kyuuriq',
-  bio: 'code, music, and late nights',
-  uid: '2,493,064',
-  status: { enabled: true, type: 'online', text: 'online' },
   avatar: '/avatar.jpg',
   background: '/bg.png',
-  theme: { accent: 'rgb(161, 62, 207)', socialColor: 'rgb(158, 158, 255)' },
-  effects: { snowfall: true, animations: true, glow: true, parallax: true },
-  socialLinks: [
-    { id: 'github', platform: 'github', label: 'GitHub', url: 'https://github.com/kyuuriq197/', enabled: true },
-    { id: 'telegram', platform: 'telegram', label: 'Telegram', url: 'https://t.me/kyuuriq', enabled: true },
-    { id: 'steam', platform: 'steam', label: 'Steam', url: 'https://steamcommunity.com/id/kyuuriq', enabled: true },
-    { id: 'discord', platform: 'music', label: 'Discord', url: 'https://discord.com/users/1555880277107023913', enabled: true },
-    { id: 'youtube', platform: 'youtube', label: 'YouTube', url: '', enabled: false },
-    { id: 'tiktok', platform: 'tiktok', label: 'TikTok', url: '', enabled: false }
-  ],
   projects: [
-    { label: 'kyuuriqstats', url: 'https://github.com/kyuuriq197/kyuuriqstats' }
-  ],
-  copyButtons: { telegram: 'kyuuriq' },
-  music: { enabled: true, source: '/music.mp3', title: 'целуйте мониторы — keijo' },
-  views: { enabled: true, mode: 'local' }
+    {
+      name: 'kyuuriqstats',
+      description: 'My CLI project (Rust).',
+      url: 'https://github.com/kyuuriq197/kyuuriqstats',
+      language: 'Rust',
+      category: 'CLI'
+    },
+    {
+      name: 'kyuuriq-esp32',
+      description: 'Custom firmware for ESP32-WROOM-32. Experimental firmware for learning ESP32 development, GPIO control, Wi-Fi and web-based device management.',
+      url: 'https://github.com/kyuuriq197/kyuuriq-esp32',
+      language: 'C++',
+      category: 'Embedded'
+    },
+    {
+      name: 'kqkernel_arm64',
+      description: 'ARM64 kernel experiments.',
+      url: 'https://github.com/kyuuriq197/kqkernel_arm64',
+      language: 'Rust',
+      category: 'Systems'
+    },
+    {
+      name: 'iphone14-5-ios-27-2-ipsw-analysis',
+      description: 'IPSW analysis and research for iPhone14,5 / iOS 27.2.',
+      url: 'https://github.com/kyuuriq197/iphone14-5-ios-27-2-ipsw-analysis',
+      language: 'Python',
+      category: 'Research'
+    },
+    {
+      name: 'my-rice-',
+      description: 'My Linux rice / desktop configuration.',
+      url: 'https://github.com/kyuuriq197/my-rice-',
+      language: 'Config',
+      category: 'Linux'
+    }
+  ]
 };
