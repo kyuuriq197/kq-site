@@ -25,7 +25,7 @@ export const profile: ProfileConfig = {
       url: 'https://github.com/kyuuriq197/kyuuriqstats',
       language: 'Rust',
       category: 'CLI',
-      preview: '/previews/kyuuriqstats.svg'
+      preview: 'https://opengraph.githubassets.com/1/kyuuriq197/kyuuriqstats'
     },
     {
       name: 'kyuuriq-esp32',
@@ -33,7 +33,7 @@ export const profile: ProfileConfig = {
       url: 'https://github.com/kyuuriq197/kyuuriq-esp32',
       language: 'C++',
       category: 'Embedded',
-      preview: '/previews/kyuuriq-esp32.svg'
+      preview: 'https://opengraph.githubassets.com/1/kyuuriq197/kyuuriq-esp32'
     },
     {
       name: 'kqkernel_arm64',
@@ -41,7 +41,7 @@ export const profile: ProfileConfig = {
       url: 'https://github.com/kyuuriq197/kqkernel_arm64',
       language: 'Rust',
       category: 'Systems',
-      preview: '/previews/kqkernel_arm64.svg'
+      preview: 'https://opengraph.githubassets.com/1/kyuuriq197/kqkernel_arm64'
     },
     {
       name: 'iphone14-5-ios-27-2-ipsw-analysis',
@@ -49,7 +49,7 @@ export const profile: ProfileConfig = {
       url: 'https://github.com/kyuuriq197/iphone14-5-ios-27-2-ipsw-analysis',
       language: 'Python',
       category: 'Research',
-      preview: '/previews/ipsw-analysis.svg'
+      preview: 'https://opengraph.githubassets.com/1/kyuuriq197/iphone14-5-ios-27-2-ipsw-analysis'
     },
     {
       name: 'my-rice-',
@@ -57,7 +57,7 @@ export const profile: ProfileConfig = {
       url: 'https://github.com/kyuuriq197/my-rice-',
       language: 'Config',
       category: 'Linux',
-      preview: '/previews/my-rice.svg'
+      preview: 'https://opengraph.githubassets.com/1/kyuuriq197/my-rice-'
     }
   ]
 };
