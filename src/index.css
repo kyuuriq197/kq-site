@@ -1,13 +1,13 @@
 * { box-sizing: border-box; }
 
 :root {
-    --bg: #f4f1ea;
-    --surface: #faf8f3;
-    --surface-2: #ece7dc;
-    --text: #1a1a1a;
-    --muted: #5a554d;
-    --accent: #b4536b;
-    --border: #d6d0c4;
+    --bg: #101114;
+    --surface: #1C1E23;
+    --surface-2: #24262C;
+    --text: #F0F0F0;
+    --muted: #A1A4AB;
+    --accent: #C5C8CE;
+    --border: #303238;
     --radius: 4px;
     --ease: cubic-bezier(0.22, 1, 0.36, 1);
 }
@@ -24,23 +24,20 @@ body {
     overflow-x: hidden;
 }
 
-::selection { background: var(--accent); color: #fff; }
+::selection { background: var(--accent); color: #101114; }
 
 .wrap { min-height: 100svh; padding: 60px 40px; max-width: 1400px; margin: 0 auto; }
 
 .portfolio { display: flex; flex-direction: column; gap: 60px; }
 
 .profile-header { display: flex; align-items: center; gap: 24px; flex-wrap: wrap; }
-.layout-toggle { margin-left: auto; padding: 8px 16px; border: 1px solid var(--border); border-radius: 999px; background: var(--surface); color: var(--text); font-family: inherit; font-size: 13px; font-weight: 500; cursor: pointer; transition: background .2s ease, border-color .2s ease; }
-.layout-toggle:hover { background: var(--surface-2); border-color: var(--accent); }
-.avatar { width: 96px; height: 96px; border-radius: 50%; object-fit: cover; }
+.avatar { width: 96px; height: 96px; border-radius: 50%; object-fit: cover; border: 1px solid var(--border); }
 .name { font-family: "Playfair Display", Georgia, serif; font-size: 48px; font-weight: 600; margin: 0; color: var(--text); letter-spacing: -0.02em; }
 
-.projects-grid {
-    display: grid;
-    grid-template-columns: repeat(12, 1fr);
-    gap: 24px;
-}
+.layout-toggle { margin-left: auto; padding: 8px 16px; border: 1px solid var(--border); border-radius: 999px; background: var(--surface); color: var(--text); font-family: inherit; font-size: 13px; font-weight: 500; cursor: pointer; transition: background .2s ease, border-color .2s ease; }
+.layout-toggle:hover { background: var(--surface-2); border-color: var(--accent); }
+
+.projects-grid { display: grid; grid-template-columns: repeat(12, 1fr); gap: 24px; }
 .projects-grid.layout-list { grid-template-columns: 1fr; }
 .projects-grid.layout-list .project-card { grid-column: span 1; }
 .projects-grid.layout-masonry { display: block; column-count: 3; column-gap: 24px; }
@@ -57,13 +54,14 @@ body {
     display: flex;
     flex-direction: column;
     gap: 12px;
-    transition: transform 0.35s var(--ease), box-shadow 0.35s var(--ease), border-color 0.25s ease;
+    transition: transform 0.35s var(--ease), box-shadow 0.35s var(--ease), border-color 0.25s ease, background 0.25s ease;
 }
 
 .project-card:hover {
     transform: translateY(-4px);
     border-color: var(--accent);
-    box-shadow: 0 12px 40px rgba(0,0,0,0.06);
+    background: var(--surface-2);
+    box-shadow: 0 12px 40px rgba(0,0,0,0.4);
 }
 
 .project-card.featured { grid-column: span 12; }
@@ -71,12 +69,13 @@ body {
 
 .project-meta { display: flex; gap: 12px; font-size: 12px; text-transform: uppercase; letter-spacing: 0.1em; color: var(--muted); }
 .project-category { color: var(--accent); font-weight: 600; }
-.project-title { font-family: "Playfair Display", Georgia, serif; font-size: 24px; font-weight: 600; margin: 0; }
+.project-title { font-family: "Playfair Display", Georgia, serif; font-size: 24px; font-weight: 600; margin: 0; color: var(--text); }
 .project-desc { font-size: 15px; line-height: 1.6; color: var(--muted); margin: 0; }
 
 @media (max-width: 900px) {
     .projects-grid { grid-template-columns: repeat(6, 1fr); }
     .project-card, .project-card.featured, .project-card.small { grid-column: span 6; }
+    .projects-grid.layout-masonry { column-count: 2; }
 }
 @media (max-width: 600px) {
     .wrap { padding: 40px 20px; }
@@ -85,6 +84,7 @@ body {
     .projects-grid { grid-template-columns: 1fr; gap: 16px; }
     .project-card, .project-card.featured, .project-card.small { grid-column: span 1; }
     .project-card { padding: 24px; }
+    .projects-grid.layout-masonry { column-count: 1; }
 }
 @media (prefers-reduced-motion: reduce) {
     .project-card { transition: none; }
