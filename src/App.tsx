@@ -38,26 +38,35 @@ export default function App() {
       <div className="bg-noise" aria-hidden="true" />
 
       <nav className="nav" aria-label="Navigation">
-        <a href="#home" className="active">Home</a>
-        <a href="#projects">Projects</a>
+        <span className="nav-brand">KYUURIQ</span>
+        <div className="nav-links">
+          <a href="#home" className="active">Home</a>
+          <a href="#projects">Projects</a>
+        </div>
       </nav>
 
       <main className="wrap" id="home">
         <section className="hero">
+          <div className="hero-left">
+            <span className="hero-eyebrow">// developer portfolio</span>
+            <h1 className="hero-name">{profile.username}</h1>
+            <p className="hero-intro">projects & experiments</p>
+          </div>
           <img className="hero-avatar" src={profile.avatar} alt={profile.username} />
-          <h1 className="hero-name">{profile.username}</h1>
-          <p className="hero-intro">developer portfolio — projects & experiments</p>
         </section>
 
         <section className="section" id="projects">
-          <h2 className="section-title">Projects</h2>
+          <div className="section-header">
+            <h2 className="section-title">Projects</h2>
+            <span className="section-count">{profile.projects.length} items</span>
+          </div>
           <Profile onOpen={(title, desc, url) => setModal({ title, desc, url })} />
         </section>
       </main>
 
       {modal && (
         <div className="modal-overlay" onClick={() => setModal(null)}>
-          <div className="modal" onClick={(e) => e.stopPropagation()}>
+          <div className="modal" style={{ position: 'relative' }} onClick={(e) => e.stopPropagation()}>
             <button className="modal-close" onClick={() => setModal(null)} aria-label="Close">×</button>
             <h2>{modal.title}</h2>
             <p>{modal.desc}</p>
