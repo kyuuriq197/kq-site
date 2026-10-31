@@ -1,32 +1,30 @@
 import { profile } from '../config/profile';
 
-interface ProfileProps {
-  onOpen: (title: string, desc: string, url: string) => void;
-}
-
-export function Profile({ onOpen }: ProfileProps) {
+export function Profile() {
   return (
-    <div className="projects-grid">
+    <div className="grid">
       {profile.projects.map((p, i) => (
         <a
           key={p.url}
-          className={'project-card' + (i === 0 ? ' featured' : '')}
+          className={'project' + (i === 0 ? ' large' : '')}
           href={p.url}
           target="_blank"
           rel="noopener noreferrer"
-          onClick={(e) => {
-            e.preventDefault();
-            onOpen(p.name, p.description, p.url);
-          }}
         >
-          <div className="project-card-inner">
-            <div className="project-num">0{i + 1}</div>
-            <h2 className="project-title">{p.name}</h2>
-            <p className="project-desc">{p.description}</p>
-            <div className="project-meta">
-              <span className="project-lang">{p.language}</span>
-              <span>{p.category}</span>
-            </div>
+          <div className="project-top">
+            <span className="mono">PROJECT / 00{i + 1}</span>
+            <span className="mono">↗</span>
+          </div>
+          <h3>{p.name}</h3>
+          <p>{p.description}</p>
+          {i === 0 ? (
+            <div className="preview"><span>PROJECT PREVIEW / REAL SCREENSHOT</span></div>
+          ) : (
+            <div className="small-preview">REAL PROJECT IMAGE</div>
+          )}
+          <div className="project-foot">
+            <span>{p.language.toUpperCase()} / {p.category.toUpperCase()}</span>
+            <span>GITHUB ↗</span>
           </div>
         </a>
       ))}

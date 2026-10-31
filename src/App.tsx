@@ -1,99 +1,45 @@
-import { useState, useEffect, useMemo } from 'react';
 import { profile } from './config/profile';
 import { Profile } from './components/Profile';
 
 export default function App() {
-  const [modal, setModal] = useState<{ title: string; desc: string; url: string } | null>(null);
-  const [cmdk, setCmdk] = useState(false);
-  const [query, setQuery] = useState('');
-
-  useEffect(() => {
-    const onKey = (e: KeyboardEvent) => {
-      if ((e.metaKey || e.ctrlKey) && e.key.toLowerCase() === 'k') {
-        e.preventDefault();
-        setCmdk((v) => !v);
-      }
-      if (e.key === 'Escape') setCmdk(false);
-    };
-    window.addEventListener('keydown', onKey);
-    return () => window.removeEventListener('keydown', onKey);
-  }, []);
-
-  const results = useMemo(() => {
-    const q = query.toLowerCase();
-    const items = [
-      { label: 'Home', action: () => { window.scrollTo({ top: 0, behavior: 'smooth' }); setCmdk(false); } },
-      { label: 'Projects', action: () => { document.getElementById('projects')?.scrollIntoView({ behavior: 'smooth' }); setCmdk(false); } },
-      ...profile.projects.map((p) => ({
-        label: p.name,
-        action: () => { setModal({ title: p.name, desc: p.description, url: p.url }); setCmdk(false); }
-      }))
-    ];
-    return q ? items.filter((i) => i.label.toLowerCase().includes(q)) : items;
-  }, [query]);
-
   return (
-    <>
-      <div className="bg-atmo" aria-hidden="true" />
-      <div className="bg-noise" aria-hidden="true" />
-
-      <nav className="nav" aria-label="Navigation">
-        <span className="nav-brand">KYUURIQ</span>
-        <div className="nav-links">
-          <a href="#home" className="active">Home</a>
-          <a href="#projects">Projects</a>
-        </div>
-      </nav>
-
-      <main className="wrap" id="home">
+    <div className="wrap">
+      <header className="top">
+        <div className="brand">KYUURIQ / DIGITAL WORKS</div>
+        <nav className="nav">
+          <a href="#top">[ HOME ]</a>
+          <a href="#projects">[ PROJECTS ]</a>
+          <a href="#about">[ INFO ]</a>
+        </nav>
+      </header>
+      <main id="top">
         <section className="hero">
-          <div className="hero-left">
-            <span className="hero-eyebrow">// developer portfolio</span>
-            <h1 className="hero-name">{profile.username}</h1>
-            <p className="hero-intro">projects & experiments</p>
-          </div>
-          <img className="hero-avatar" src={profile.avatar} alt={profile.username} />
-        </section>
-
-        <section className="section" id="projects">
-          <div className="section-header">
-            <h2 className="section-title">Projects</h2>
-            <span className="section-count">{profile.projects.length} items</span>
-          </div>
-          <Profile onOpen={(title, desc, url) => setModal({ title, desc, url })} />
-        </section>
-      </main>
-
-      {modal && (
-        <div className="modal-overlay" onClick={() => setModal(null)}>
-          <div className="modal" style={{ position: 'relative' }} onClick={(e) => e.stopPropagation()}>
-            <button className="modal-close" onClick={() => setModal(null)} aria-label="Close">×</button>
-            <h2>{modal.title}</h2>
-            <p>{modal.desc}</p>
-            <a className="modal-link" href={modal.url} target="_blank" rel="noopener noreferrer">Open repository →</a>
-          </div>
-        </div>
-      )}
-
-      {cmdk && (
-        <div className="cmdk-overlay" onClick={() => setCmdk(false)}>
-          <div className="cmdk" onClick={(e) => e.stopPropagation()}>
-            <input
-              autoFocus
-              placeholder="Search..."
-              value={query}
-              onChange={(e) => setQuery(e.target.value)}
-            />
-            <div className="cmdk-list">
-              {results.map((r, i) => (
-                <div key={i} className="cmdk-item" onClick={r.action}>
-                  {r.label}
-                </div>
-              ))}
+          <div>
+            <div className="eyebrow kicker">[ 01 — INTRODUCTION ]</div>
+            <h1>kyuuriq<span style={{ color: '#777' }}>.</span></h1>
+            <p className="intro">A personal space for software, experiments and digital projects.</p>
+            <div className="dotline" aria-hidden="true">
+              {Array.from({ length: 24 }).map((_, i) => <i key={i} />)}
             </div>
           </div>
-        </div>
-      )}
-    </>
+          <div className="avatar" aria-label="Avatar">
+            <img src={profile.avatar} alt={profile.username} />
+          </div>
+        </section>
+        <section id="projects">
+          <div className="section-head">
+            <h2>SELECTED PROJECTS</h2>
+            <span className="mono">[ 02 / WORK ]</span>
+          </div>
+          <Profile />
+        </section>
+        <div className="note">DESIGN NOTE: Editorial portfolio concept. Replace preview areas with real project screenshots.</div>
+      </main>
+      <footer className="footer" id="about">
+        <span>KYUURIQ © 2026</span>
+        <span>MONOCHROME / DOT MATRIX / EDITORIAL GRID</span>
+        <span><i className="red-dot" />DESIGN CONCEPT 001</span>
+      </footer>
+    </div>
   );
 }
