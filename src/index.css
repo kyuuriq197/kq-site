@@ -30,7 +30,9 @@ body {
 
 .portfolio { display: flex; flex-direction: column; gap: 60px; }
 
-.profile-header { display: flex; align-items: center; gap: 24px; }
+.profile-header { display: flex; align-items: center; gap: 24px; flex-wrap: wrap; }
+.layout-toggle { margin-left: auto; padding: 8px 16px; border: 1px solid var(--border); border-radius: 999px; background: var(--surface); color: var(--text); font-family: inherit; font-size: 13px; font-weight: 500; cursor: pointer; transition: background .2s ease, border-color .2s ease; }
+.layout-toggle:hover { background: var(--surface-2); border-color: var(--accent); }
 .avatar { width: 96px; height: 96px; border-radius: 50%; object-fit: cover; }
 .name { font-family: "Playfair Display", Georgia, serif; font-size: 48px; font-weight: 600; margin: 0; color: var(--text); letter-spacing: -0.02em; }
 
@@ -39,6 +41,10 @@ body {
     grid-template-columns: repeat(12, 1fr);
     gap: 24px;
 }
+.projects-grid.layout-list { grid-template-columns: 1fr; }
+.projects-grid.layout-list .project-card { grid-column: span 1; }
+.projects-grid.layout-masonry { display: block; column-count: 3; column-gap: 24px; }
+.projects-grid.layout-masonry .project-card { break-inside: avoid; margin-bottom: 24px; display: inline-block; width: 100%; }
 
 .project-card {
     grid-column: span 6;
