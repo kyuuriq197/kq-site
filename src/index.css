@@ -212,8 +212,6 @@ body {
 }
 .modal h2 { font-family: "Playfair Display", Georgia, serif; font-size: 32px; margin: 0 0 16px; }
 .modal p { color: var(--muted); line-height: 1.7; }
-.modal-link { display: inline-block; margin-top: 20px; color: var(--accent); text-decoration: none; font-weight: 500; transition: opacity .2s ease; }
-.modal-link:hover { opacity: 0.8; }
 .modal-close {
     position: absolute;
     top: 16px;
@@ -231,6 +229,49 @@ body {
 .modal-close:hover { background: rgba(255,255,255,0.1); }
 @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
 @keyframes slideUp { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+
+/* Command palette */
+.cmdk-overlay {
+    position: fixed;
+    inset: 0;
+    z-index: 300;
+    background: rgba(0,0,0,0.5);
+    backdrop-filter: blur(4px);
+    display: grid;
+    place-items: start center;
+    padding-top: 20vh;
+    animation: fadeIn 0.2s var(--ease);
+}
+.cmdk {
+    width: 100%;
+    max-width: 560px;
+    background: rgba(255,255,255,0.06);
+    border: 1px solid rgba(255,255,255,0.12);
+    border-radius: var(--radius);
+    backdrop-filter: blur(24px) saturate(120%);
+    -webkit-backdrop-filter: blur(24px) saturate(120%);
+    box-shadow: 0 24px 80px rgba(0,0,0,0.5);
+    overflow: hidden;
+}
+.cmdk input {
+    width: 100%;
+    padding: 16px 20px;
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+    color: var(--text);
+    font-family: inherit;
+    font-size: 15px;
+    outline: none;
+}
+.cmdk-list { max-height: 320px; overflow-y: auto; }
+.cmdk-item {
+    padding: 12px 20px;
+    cursor: pointer;
+    color: var(--muted);
+    transition: background .15s ease, color .15s ease;
+}
+.cmdk-item:hover, .cmdk-item.active { background: rgba(255,255,255,0.06); color: var(--text); }
 
 /* Cursor */
 .cursor { position: fixed; top: 0; left: 0; width: 12px; height: 12px; margin-left: -6px; margin-top: -6px; border-radius: 50%; background: rgba(255,255,255,0.9); pointer-events: none; z-index: 9999; mix-blend-mode: difference; transition: width .2s, height .2s, margin .2s; }
@@ -255,9 +296,10 @@ body {
     .projects-grid.layout-masonry { column-count: 1; }
     .nav { top: 16px; padding: 4px; }
     .nav a { padding: 6px 12px; font-size: 12px; }
+    .modal { padding: 24px; }
 }
 @media (prefers-reduced-motion: reduce) {
     .bg-atmo { animation: none; }
     .project-card { transition: none; }
-    .modal, .modal-overlay { animation: none; }
+    .modal, .modal-overlay, .cmdk-overlay { animation: none; }
 }
