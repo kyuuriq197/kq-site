@@ -8,6 +8,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Onest:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="icon" href="favicon.svg" type="image/svg+xml">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -17,166 +18,40 @@
 
     <div class="snow" id="snow" aria-hidden="true"></div>
 
-    <!-- click to enter -->
     <div class="enter" id="enter">
         <button class="enter-btn" id="enterBtn" type="button">click to enter</button>
     </div>
 
+    <div class="toast" id="toast" aria-live="polite"></div>
+
     <main class="wrap">
         <section class="card" aria-label="Профиль">
-
             <div class="avatar-wrap">
-                <img class="avatar" src="avatar.png" alt="Аватар" onerror="this.src='bg.png'">
-                <span class="status" title="online"></span>
+                <img class="avatar" id="avatar" src="avatar.png" alt="Аватар">
+                <span class="status" id="status" title="online"></span>
             </div>
 
-            <h1 class="name">kyuuriq</h1>
-            <p class="handle">@kyuuriq</p>
-            <p class="bio">мой маленький уголок в интернете</p>
+            <h1 class="name" id="name">kyuuriq</h1>
+            <p class="handle" id="handle">@kyuuriq</p>
+            <p class="bio" id="bio">мой маленький уголок в интернете</p>
 
-            <div class="socials">
-                <a class="social" href="https://github.com/kyuuriq197/" target="_blank" rel="noopener" aria-label="GitHub" title="GitHub">
-                    <svg viewBox="0 0 24 24" focusable="false"><path d="M12 .5C5.73.5.5 5.73.5 12c0 5.08 3.29 9.39 7.86 10.91.58.11.79-.25.79-.56v-2.17c-3.2.7-3.88-1.54-3.88-1.54-.52-1.33-1.28-1.68-1.28-1.68-1.05-.72.08-.7.08-.7 1.16.08 1.77 1.19 1.77 1.19 1.03 1.77 2.7 1.26 3.36.96.1-.75.4-1.26.73-1.55-2.55-.29-5.23-1.28-5.23-5.68 0-1.26.45-2.29 1.19-3.1-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.18 1.18a11.1 11.1 0 0 1 5.79 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.76.11 3.05.74.81 1.19 1.84 1.19 3.1 0 4.41-2.69 5.38-5.25 5.66.41.36.78 1.06.78 2.14v3.17c0 .31.21.68.8.56A11.5 11.5 0 0 0 23.5 12C23.5 5.73 18.27.5 12 .5z"/></svg>
-                </a>
-                <a class="social" href="https://t.me/kyuuriq" target="_blank" rel="noopener" aria-label="Telegram" title="Telegram">
-                    <svg viewBox="0 0 24 24" focusable="false"><path d="M21.94 4.4l-3.06 14.44c-.23 1.02-.84 1.27-1.7.79l-4.7-3.46-2.27 2.18c-.25.25-.46.46-.94.46l.34-4.77 8.68-7.84c.38-.34-.08-.53-.58-.19L6.99 13.2 2.35 11.75c-1.01-.32-1.03-1.01.21-1.5L20.6 2.94c.84-.31 1.58.2 1.34 1.46z"/></svg>
-                </a>
-                <a class="social" href="https://steamcommunity.com/id/kyuuriq" target="_blank" rel="noopener" aria-label="Steam" title="Steam">
-                    <svg viewBox="0 0 24 24" focusable="false"><path d="M12 2C6.48 2 2 6.48 2 12c0 4.42 2.87 8.17 6.84 9.5.5.09.66-.22.66-.48v-1.7c-2.78.6-3.37-1.34-3.37-1.34-.45-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.61.07-.61 1 .07 1.53 1.03 1.53 1.03.89 1.52 2.34 1.08 2.91.83.09-.65.35-1.08.63-1.33-2.22-.25-4.56-1.11-4.56-4.94 0-1.09.39-1.98 1.03-2.68-.1-.25-.45-1.27.1-2.65 0 0 .84-.27 2.75 1.02A9.5 9.5 0 0 1 12 6.8c.85.004 1.71.115 2.5.34 1.9-1.29 2.75-1.02 2.75-1.02.55 1.38.2 2.4.1 2.65.64.7 1.03 1.59 1.03 2.68 0 3.84-2.34 4.69-4.57 4.94.36.31.68.92.68 1.85v2.74c0 .27.16.58.67.48A10.01 10.01 0 0 0 22 12c0-5.52-4.48-10-10-10z"/></svg>
-                </a>
-                <a class="social" href="https://t.me/deadonsky" target="_blank" rel="noopener" aria-label="Telegram исполнителя" title="Telegram исполнителя">
-                    <span class="social-emoji">🎵</span>
-                </a>
-            </div>
+            <div class="socials" id="socials"></div>
 
-            <div class="music">
-                <audio id="audio" src="music.mp3" preload="none"></audio>
-                <div class="player">
-                    <button class="player-btn" id="musicBtn" type="button" aria-pressed="false" aria-label="Воспроизвести">
-                        <span id="musicIcon">▶</span>
-                    </button>
-                    <div class="player-info">
-                        <div class="player-title">celujte monitory — keijo</div>
-                        <div class="player-bar">
-                            <input type="range" id="seek" min="0" max="100" value="0" step="0.1" aria-label="Прогресс">
-                        </div>
-                        <div class="player-time">
-                            <span id="cur">0:00</span>
-                            <span id="dur">0:00</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            <div class="music" id="musicBlock"></div>
 
             <div class="stats">
-                <span>kyuuriq</span>
+                <span id="uid">kyuuriq</span>
                 <span class="dot">·</span>
-                <span>уголок</span>
+                <span id="views">0 просмотров</span>
             </div>
         </section>
 
         <footer>
-            © 2026 kyuuriq
+            © 2026 <span id="footerName">kyuuriq</span>
         </footer>
     </main>
 
-    <script>
-        // Снег
-        (function () {
-            const container = document.getElementById('snow');
-            if (!container) return;
-            const COUNT = window.matchMedia('(max-width: 640px)').matches ? 24 : 44;
-            for (let i = 0; i < COUNT; i++) {
-                const flake = document.createElement('span');
-                flake.className = 'flake';
-                flake.textContent = '❅';
-                flake.style.left = (Math.random() * 100) + 'vw';
-                flake.style.animationDuration = (6 + Math.random() * 8) + 's';
-                flake.style.animationDelay = (-Math.random() * 12) + 's';
-                flake.style.fontSize = (10 + Math.random() * 14) + 'px';
-                flake.style.opacity = (0.35 + Math.random() * 0.45).toFixed(2);
-                container.appendChild(flake);
-            }
-        })();
-
-        // Click to enter
-        (function () {
-            const overlay = document.getElementById('enter');
-            const btn = document.getElementById('enterBtn');
-            const audio = document.getElementById('audio');
-            if (!overlay || !btn) return;
-            btn.addEventListener('click', async () => {
-                overlay.classList.add('hidden');
-                try { if (audio) await audio.play(); } catch (e) {}
-                const musicBtn = document.getElementById('musicBtn');
-                const icon = document.getElementById('musicIcon');
-                if (musicBtn) { musicBtn.classList.add('playing'); musicBtn.setAttribute('aria-pressed', 'true'); }
-                if (icon) icon.textContent = '❚❚';
-            });
-        })();
-
-        // Музыка
-        (function () {
-            const audio = document.getElementById('audio');
-            const btn = document.getElementById('musicBtn');
-            const icon = document.getElementById('musicIcon');
-            const seek = document.getElementById('seek');
-            const cur = document.getElementById('cur');
-            const dur = document.getElementById('dur');
-            if (!audio || !btn) return;
-
-            function fmt(t) {
-                if (!isFinite(t)) return '0:00';
-                const m = Math.floor(t / 60);
-                const sec = Math.floor(t % 60);
-                return m + ':' + (sec < 10 ? '0' : '') + sec;
-            }
-
-            btn.addEventListener('click', async () => {
-                try {
-                    if (audio.paused) {
-                        await audio.play();
-                        btn.setAttribute('aria-pressed', 'true');
-                        btn.classList.add('playing');
-                        if (icon) icon.textContent = '\u275A\u275A';
-                    } else {
-                        audio.pause();
-                        btn.setAttribute('aria-pressed', 'false');
-                        btn.classList.remove('playing');
-                        if (icon) icon.textContent = '\u25B6';
-                    }
-                } catch (e) {
-                    if (icon) icon.textContent = '!';
-                }
-            });
-
-            audio.addEventListener('loadedmetadata', () => {
-                if (dur) dur.textContent = fmt(audio.duration);
-            });
-
-            audio.addEventListener('timeupdate', () => {
-                if (cur) cur.textContent = fmt(audio.currentTime);
-                if (seek && audio.duration) {
-                    seek.value = (audio.currentTime / audio.duration) * 100;
-                }
-            });
-
-            audio.addEventListener('ended', () => {
-                btn.setAttribute('aria-pressed', 'false');
-                btn.classList.remove('playing');
-                if (icon) icon.textContent = '\u25B6';
-                if (seek) seek.value = 0;
-            });
-
-            if (seek) {
-                seek.addEventListener('input', () => {
-                    if (audio.duration) {
-                        audio.currentTime = (seek.value / 100) * audio.duration;
-                    }
-                });
-            }
-        })();
-    </script>
-
+    <script src="config.js"></script>
+    <script src="app.js"></script>
 </body>
 </html>
