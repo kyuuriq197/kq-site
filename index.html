@@ -36,6 +36,10 @@
                     <span class="link-icon">✈</span>
                     <span>Telegram</span>
                 </a>
+                <button class="link" type="button" data-copy="kyuuriq." id="discordBtn">
+                    <span class="link-icon">💬</span>
+                    <span id="discordLabel">Discord: kyuuriq.</span>
+                </button>
                 <a class="link" href="https://steamcommunity.com/id/kyuuriq" target="_blank" rel="noopener">
                     <span class="link-icon">🎮</span>
                     <span>Steam</span>
@@ -79,6 +83,23 @@
                 flake.style.opacity = (0.35 + Math.random() * 0.45).toFixed(2);
                 container.appendChild(flake);
             }
+        })();
+
+        // Discord copy
+        (function () {
+            const btn = document.getElementById('discordBtn');
+            const label = document.getElementById('discordLabel');
+            if (!btn) return;
+            const original = label ? label.textContent : '';
+            btn.addEventListener('click', async () => {
+                try {
+                    await navigator.clipboard.writeText('kyuuriq.');
+                    if (label) label.textContent = 'скопировано ✓';
+                    setTimeout(() => { if (label) label.textContent = original; }, 1600);
+                } catch (e) {
+                    if (label) label.textContent = 'не удалось скопировать';
+                }
+            });
         })();
 
         // Музыка
