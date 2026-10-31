@@ -36,6 +36,15 @@ export function Profile({ onToast }: ProfileProps) {
       <p className="handle">{profile.handle}</p>
       <p className="bio">{profile.bio}</p>
       <SocialLinks />
+      {profile.projects && profile.projects.length > 0 && (
+        <div className="projects">
+          {profile.projects.map((p) => (
+            <a key={p.url} className="project" href={p.url} target="_blank" rel="noopener noreferrer">
+              {p.label}
+            </a>
+          ))}
+        </div>
+      )}
       <div className="copy-row">
         {profile.copyButtons.discord && (
           <button
