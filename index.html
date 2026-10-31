@@ -3,108 +3,109 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-    <meta name="theme-color" content="#8f9291">
-    <title>kyuuriq - это мой уголок</title>
+    <meta name="theme-color" content="#0a0a0a">
+    <title>kyuuriq - профиль</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<div class="scene" aria-hidden="true">
-    <div class="scene-photo"></div>
-    <div class="scene-fog"></div>
-    <div class="scene-tint"></div>
-    <div class="scene-grain"></div>
-</div>
+    <!-- Фоновое видео (замени bg.mp4 на свой файл) -->
+    <video class="bg-video" autoplay muted loop playsinline poster="bg.jpg">
+        <source src="bg.mp4" type="video/mp4">
+    </video>
+    <div class="bg-overlay" aria-hidden="true"></div>
 
-<main class="container">
+    <!-- Снег -->
+    <div class="snow" id="snow" aria-hidden="true"></div>
 
-    <header class="hero">
-        <p class="eyebrow"><span id="today">31 октября · суббота</span></p>
-        <h1>kyuuriq</h1>
-        <p class="subtitle">да, это мой сайт. не спрашивай зачем.</p>
-    </header>
+    <main class="wrap">
+        <section class="card" aria-label="Профиль">
 
-    <section class="widgets" aria-label="О сайте и ссылки">
-
-        <article class="glass about">
-            <div class="widget-head">
-                <span class="icon" aria-hidden="true">👋</span>
-                <span class="widget-label">привет</span>
-            </div>
-            <p class="lead">Я kyuuriq.</p>
-            <p class="muted">Тут находятся мои ссылки, проекты и прочая фигня.</p>
-        </article>
-
-        <a class="glass tile" href="https://github.com/kyuuriq197/" target="_blank" rel="noopener">
-            <span class="tile-icon" aria-hidden="true">
-                <svg viewBox="0 0 24 24" focusable="false">
-                    <path d="M12 .5C5.73.5.5 5.73.5 12c0 5.08 3.29 9.39 7.86 10.91.58.11.79-.25.79-.56v-2.17c-3.2.7-3.88-1.54-3.88-1.54-.52-1.33-1.28-1.68-1.28-1.68-1.05-.72.08-.7.08-.7 1.16.08 1.77 1.19 1.77 1.19 1.03 1.77 2.7 1.26 3.36.96.1-.75.4-1.26.73-1.55-2.55-.29-5.23-1.28-5.23-5.68 0-1.26.45-2.29 1.19-3.1-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.18 1.18a11.1 11.1 0 0 1 5.79 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.76.11 3.05.74.81 1.19 1.84 1.19 3.1 0 4.41-2.69 5.38-5.25 5.66.41.36.78 1.06.78 2.14v3.17c0 .31.21.68.8.56A11.5 11.5 0 0 0 23.5 12C23.5 5.73 18.27.5 12 .5z"/>
-                </svg>
-            </span>
-            <span class="tile-text">
-                <span class="tile-title">GitHub</span>
-                <span class="tile-sub">kyuuriq197</span>
-            </span>
-            <span class="tile-arrow" aria-hidden="true">↗</span>
-        </a>
-
-        <a class="glass tile" href="https://t.me/kyuuriq" target="_blank" rel="noopener">
-            <span class="tile-icon" aria-hidden="true">
-                <svg viewBox="0 0 24 24" focusable="false">
-                    <path d="M21.94 4.4l-3.06 14.44c-.23 1.02-.84 1.27-1.7.79l-4.7-3.46-2.27 2.18c-.25.25-.46.46-.94.46l.34-4.77 8.68-7.84c.38-.34-.08-.53-.58-.19L6.99 13.2 2.35 11.75c-1.01-.32-1.03-1.01.21-1.5L20.6 2.94c.84-.31 1.58.2 1.34 1.46z"/>
-                </svg>
-            </span>
-            <span class="tile-text">
-                <span class="tile-title">Telegram</span>
-                <span class="tile-sub">@kyuuriq</span>
-            </span>
-            <span class="tile-arrow" aria-hidden="true">↗</span>
-        </a>
-
-        <article class="glass projects">
-            <div class="widget-head">
-                <span class="icon" aria-hidden="true">💼</span>
-                <span class="widget-label">проекты</span>
+            <div class="avatar-wrap">
+                <img class="avatar" src="avatar.webp" alt="Аватар" onerror="this.src='bg.jpg'">
+                <span class="status" title="онлайн"></span>
             </div>
 
-            <a class="project" href="https://github.com/kyuuriq197/kyuuriqstats" target="_blank" rel="noopener">
-                <span class="project-text">
-                    <span class="project-title">kyuuriqstats</span>
-                    <span class="project-sub">мой CLI-проект</span>
-                </span>
-                <span class="tile-arrow" aria-hidden="true">↗</span>
-            </a>
+            <h1 class="name">kyuuriq</h1>
+            <p class="handle">@kyuuriq</p>
+            <p class="bio">мой маленький уголок в интернете</p>
 
-            <p class="muted">Я устал так что через год еще один проект на RUST, всем пока.</p>
-        </article>
+            <div class="links">
+                <a class="link" href="https://github.com/kyuuriq197/" target="_blank" rel="noopener">
+                    <span class="link-icon">⌥</span>
+                    <span>GitHub</span>
+                </a>
+                <a class="link" href="https://t.me/kyuuriq" target="_blank" rel="noopener">
+                    <span class="link-icon">✈</span>
+                    <span>Telegram</span>
+                </a>
+            </div>
 
-        <div class="glass note">
-            <span class="icon" aria-hidden="true">⚠</span>
-            <span>САЙТ СДЕЛАН НА КОЛЕНКЕ</span>
-        </div>
+            <div class="music">
+                <audio id="audio" src="music.mp3" loop preload="none"></audio>
+                <button class="music-btn" id="musicBtn" type="button" aria-pressed="false">
+                    <span class="music-icon">♪</span>
+                    <span id="musicLabel">включить музыку</span>
+                </button>
+            </div>
 
-    </section>
+            <div class="stats">
+                <span>kyuuriq</span>
+                <span>·</span>
+                <span>уголок</span>
+            </div>
+        </section>
 
-    <footer>
-        © 2026 kyuuriq · <span>работает на чем то</span>
-        <small class="credit">
-            фон — <a href="https://commons.wikimedia.org/wiki/File:Path_in_a_Foggy_Forest_(50874611502).jpg" target="_blank" rel="noopener">Tero Karppinen</a>, CC BY 2.0
-        </small>
-    </footer>
+        <footer>
+            © 2026 kyuuriq
+            <small class="credit">фон — <a href="https://commons.wikimedia.org/wiki/File:Path_in_a_Foggy_Forest_(50874611502).jpg" target="_blank" rel="noopener">Tero Karppinen</a>, CC BY 2.0</small>
+        </footer>
+    </main>
 
-</main>
+    <script>
+        // Снег
+        (function () {
+            const container = document.getElementById('snow');
+            if (!container) return;
+            const COUNT = window.matchMedia('(max-width: 640px)').matches ? 28 : 48;
+            for (let i = 0; i < COUNT; i++) {
+                const flake = document.createElement('span');
+                flake.className = 'flake';
+                flake.textContent = '❅';
+                flake.style.left = (Math.random() * 100) + 'vw';
+                flake.style.animationDuration = (6 + Math.random() * 8) + 's';
+                flake.style.animationDelay = (-Math.random() * 12) + 's';
+                flake.style.fontSize = (10 + Math.random() * 14) + 'px';
+                flake.style.opacity = (0.35 + Math.random() * 0.45).toFixed(2);
+                container.appendChild(flake);
+            }
+        })();
 
-<script>
-    (() => {
-        const date = new Date();
-        const days = ['воскресенье', 'понедельник', 'вторник', 'среда', 'четверг', 'пятница', 'суббота'];
-        const months = ['января', 'февраля', 'марта', 'апреля', 'мая', 'июня', 'июля', 'августа', 'сентября', 'октября', 'ноября', 'декабря'];
-        const el = document.getElementById('today');
-        if (el) {
-            el.textContent = date.getDate() + ' ' + months[date.getMonth()] + ' · ' + days[date.getDay()];
-        }
-    })();
-</script>
+        // Музыка
+        (function () {
+            const audio = document.getElementById('audio');
+            const btn = document.getElementById('musicBtn');
+            const label = document.getElementById('musicLabel');
+            if (!audio || !btn) return;
+            btn.addEventListener('click', async () => {
+                try {
+                    if (audio.paused) {
+                        await audio.play();
+                        btn.setAttribute('aria-pressed', 'true');
+                        btn.classList.add('playing');
+                        label.textContent = 'выключить музыку';
+                    } else {
+                        audio.pause();
+                        btn.setAttribute('aria-pressed', 'false');
+                        btn.classList.remove('playing');
+                        label.textContent = 'включить музыку';
+                    }
+                } catch (e) {
+                    label.textContent = 'не удалось воспроизвести';
+                }
+            });
+        })();
+    </script>
 
 </body>
 </html>
