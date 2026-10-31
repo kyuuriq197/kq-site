@@ -1,57 +1,13 @@
-<!DOCTYPE html>
-<html lang="ru">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-    <meta name="theme-color" content="#0a0a0a">
-    <title>kyuuriq - профиль</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Onest:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="icon" href="favicon.svg" type="image/svg+xml">
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-
-    <div class="bg" aria-hidden="true"></div>
-    <div class="bg-overlay" aria-hidden="true"></div>
-
-    <div class="snow" id="snow" aria-hidden="true"></div>
-
-    <div class="enter" id="enter">
-        <button class="enter-btn" id="enterBtn" type="button">click to enter</button>
-    </div>
-
-    <div class="toast" id="toast" aria-live="polite"></div>
-
-    <main class="wrap">
-        <section class="card" aria-label="Профиль">
-            <div class="avatar-wrap">
-                <img class="avatar" id="avatar" src="avatar.png" alt="Аватар">
-                <span class="status" id="status" title="online"></span>
-            </div>
-
-            <h1 class="name" id="name">kyuuriq</h1>
-            <p class="handle" id="handle">@kyuuriq</p>
-            <p class="bio" id="bio">мой маленький уголок в интернете</p>
-
-            <div class="socials" id="socials"></div>
-
-            <div class="music" id="musicBlock"></div>
-
-            <div class="stats">
-                <span id="uid">kyuuriq</span>
-                <span class="dot">·</span>
-                <span id="views">0 просмотров</span>
-            </div>
-        </section>
-
-        <footer>
-            © 2026 <span id="footerName">kyuuriq</span>
-        </footer>
-    </main>
-
-    <script src="config.js"></script>
-    <script src="app.js"></script>
-</body>
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>kq-site-vite</title>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
 </html>

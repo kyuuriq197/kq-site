@@ -1,38 +1,47 @@
 # kyuuriq profile
 
-Персональный сайт-профиль в стиле guns.lol, полностью настраивается через `config.js`.
+Персональный сайт-профиль в стиле guns.lol, реализованный на React + Vite + TypeScript.
 
-## Запуск
-
-Любой статический сервер. Например:
+## Установка
 
 ```bash
-python -m http.server 8000
+pnpm install
 ```
 
-Открой http://localhost:8000
+## Запуск dev-сервера
+
+```bash
+pnpm dev
+```
+
+Открой http://localhost:5173
+
+## Сборка
+
+```bash
+pnpm build
+```
 
 ## Настройка
 
-Отредактируй `config.js`:
+Отредактируй `src/config/profile.ts`:
 
-- `username`, `handle`, `bio`, `uid`, `status`
-- `avatar`, `background`
-- `theme.accent`, `theme.socialColor`
-- `snowflakes` — включить/выключить снег
-- `music` — `enabled`, `src`, `title`
-- `socialLinks` — массив ссылок, `enabled: false` отключает
-- `discord`, `telegram` — ники для копирования
-- `profileViews` — число или `null` для авто-счётчика
+- username, handle, bio, uid
+- avatar, background
+- theme (accent, socialColor)
+- effects (snowfall, animations, glow, parallax)
+- socialLinks (id, platform, label, url, enabled)
+- copyButtons (discord, telegram)
+- music (enabled, source, title)
+- views (enabled, mode, backendUrl)
 
 ## Публикация
 
-Загрузи файлы на любой статический хостинг (GitHub Pages, Vercel, Netlify, Cloudflare Pages).
+Загрузи содержимое `dist/` на любой статический хостинг (GitHub Pages, Vercel, Netlify, Cloudflare Pages).
 
 ## Структура
 
-- `index.html` — оболочка
-- `style.css` — стили
-- `app.js` — логика и рендеринг из конфига
-- `config.js` — данные профиля
-- `avatar.png`, `bg.png`, `music.mp3` — медиа
+- `src/config/profile.ts` — конфигурация
+- `src/components/` — компоненты
+- `src/App.tsx` — корневой компонент
+- `public/` — статические ассеты (avatar.png, bg.png, music.mp3, favicon.svg)
