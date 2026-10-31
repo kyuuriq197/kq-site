@@ -31,9 +31,9 @@ body {
     color: var(--text);
 
     font-family:
+        "Onest",
         -apple-system,
         BlinkMacSystemFont,
-        "SF Pro Display",
         "Segoe UI Variable Display",
         "Segoe UI",
         Inter,
@@ -148,7 +148,7 @@ a {
 
 .card {
     width: 100%;
-    max-width: 420px;
+    max-width: 480px;
 
     padding: 35px 20px;
 
