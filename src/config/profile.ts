@@ -31,7 +31,7 @@ export const profile: ProfileConfig = {
   avatar: '/avatar.png',
   background: '/bg.png',
   theme: { accent: 'rgb(161, 62, 207)', socialColor: 'rgb(158, 158, 255)' },
-  effects: { snowfall: true, animations: true, glow: true, parallax: false },
+  effects: { snowfall: true, animations: true, glow: true, parallax: true },
   socialLinks: [
     { id: 'github', platform: 'github', label: 'GitHub', url: 'https://github.com/kyuuriq197/', enabled: true },
     { id: 'telegram', platform: 'telegram', label: 'Telegram', url: 'https://t.me/kyuuriq', enabled: true },
