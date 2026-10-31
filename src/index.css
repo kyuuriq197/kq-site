@@ -43,15 +43,15 @@ a { -webkit-tap-highlight-color: transparent; }
 
 .wrap { position: relative; z-index: 1; display: flex; flex-direction: column; align-items: center; justify-content: center; min-height: 100svh; padding: 50px 15px; padding-left: max(15px, env(safe-area-inset-left)); padding-right: max(15px, env(safe-area-inset-right)); padding-top: max(50px, env(safe-area-inset-top)); padding-bottom: max(30px, env(safe-area-inset-bottom)); gap: 10px; }
 
-.card { width: 100%; max-width: 640px; padding: 35px 20px; border: 1px solid var(--glass-line); border-radius: var(--radius); background: var(--glass-bg); backdrop-filter: blur(var(--blur)); box-shadow: 0 1px 0 rgba(255,255,255,0.55) inset, 0 0 80px rgba(161,62,207,0.18), 0 24px 60px -20px rgba(0,0,0,0.65); text-align: center; color: #1a1d20; }
+.card { width: 100%; max-width: 640px; padding: 35px 20px; border: 1px solid var(--glass-line); border-radius: var(--radius); background: var(--glass-bg); backdrop-filter: blur(var(--blur)); box-shadow: 0 1px 0 rgba(255,255,255,0.55) inset; text-align: center; color: #1a1d20; }
 
 .avatar-wrap { position: relative; width: 118px; height: 118px; margin: 0 auto 14px; }
-.avatar { width: 118px; height: 118px; border-radius: 50%; object-fit: cover; border: 3px solid rgba(255,255,255,0.7); box-shadow: 0 8px 24px rgba(0,0,0,0.35); }
+.avatar { width: 118px; height: 118px; border-radius: 50%; object-fit: cover; }
 .status { position: absolute; right: 6px; bottom: 6px; width: 16px; height: 16px; border-radius: 50%; border: 3px solid rgba(255,255,255,0.9); }
 
-.name { margin: 0; font-size: 28px; font-weight: 700; letter-spacing: -0.02em; color: #111; }
-.handle { margin: 4px 0 0; color: rgba(0,0,0,0.55); font-size: 14px; font-weight: 500; }
-.bio { margin: 12px 0 0; color: rgba(0,0,0,0.72); font-size: 14px; line-height: 1.6; }
+.name { margin: 0; font-size: 40px; font-weight: 600; letter-spacing: -0.02em; color: #fff; }
+.handle { margin: 5px 0 0; color: #fff; font-size: 19px; font-weight: 570; }
+.bio { margin: 0; color: #fff; font-size: 18.5px; font-weight: 550; line-height: normal; }
 
 .socials { display: flex; align-items: center; justify-content: center; gap: 10px; flex-wrap: wrap; margin-top: 20px; }
 .social { width: 38px; height: 38px; display: grid; place-items: center; color: var(--social-color); text-decoration: none; transition: transform .25s var(--ease), color .25s ease; }
