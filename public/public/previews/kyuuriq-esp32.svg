@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 240" width="400" height="240">
+  <rect width="400" height="240" fill="#111"/>
+  <g stroke="#303030" stroke-width="1" fill="none">
+    <rect x="120" y="60" width="160" height="120" rx="4"/>
+    <rect x="140" y="80" width="120" height="80" rx="2"/>
+  </g>
+  <g fill="#303030">
+    <circle cx="160" cy="100" r="2"/><circle cx="180" cy="100" r="2"/><circle cx="200" cy="100" r="2"/><circle cx="220" cy="100" r="2"/><circle cx="240" cy="100" r="2"/>
+    <circle cx="160" cy="120" r="2"/><circle cx="180" cy="120" r="2"/><circle cx="200" cy="120" r="2"/><circle cx="220" cy="120" r="2"/><circle cx="240" cy="120" r="2"/>
+    <circle cx="160" cy="140" r="2"/><circle cx="180" cy="140" r="2"/><circle cx="200" cy="140" r="2"/><circle cx="220" cy="140" r="2"/><circle cx="240" cy="140" r="2"/>
+  </g>
+  <text x="200" y="195" text-anchor="middle" font-family="monospace" font-size="14" fill="#a0a0a0" letter-spacing="2">ESP32</text>
+  <text x="20" y="220" font-family="monospace" font-size="10" fill="#686868" letter-spacing="2">PROJECT / 002</text>
+</svg>

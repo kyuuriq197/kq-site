@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 240" width="400" height="240">
+  <rect width="400" height="240" fill="#111"/>
+  <g stroke="#303030" stroke-width="1" fill="none">
+    <path d="M80 60 L200 40 L320 60 L320 180 L200 200 L80 180 Z"/>
+    <path d="M200 40 L200 200" stroke-dasharray="4 4"/>
+    <path d="M80 60 L320 180" stroke-dasharray="2 6"/>
+    <path d="M320 60 L80 180" stroke-dasharray="2 6"/>
+  </g>
+  <circle cx="200" cy="120" r="8" fill="#D71920"/>
+  <text x="200" y="220" text-anchor="middle" font-family="monospace" font-size="12" fill="#a0a0a0" letter-spacing="2">ARM64 KERNEL</text>
+  <text x="20" y="220" font-family="monospace" font-size="10" fill="#686868" letter-spacing="2">PROJECT / 003</text>
+</svg>

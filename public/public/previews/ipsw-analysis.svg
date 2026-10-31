@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 240" width="400" height="240">
+  <rect width="400" height="240" fill="#111"/>
+  <g fill="#303030">
+    <rect x="40" y="40" width="8" height="160"/>
+    <rect x="60" y="80" width="8" height="120"/>
+    <rect x="80" y="60" width="8" height="140"/>
+    <rect x="100" y="100" width="8" height="100"/>
+    <rect x="120" y="50" width="8" height="150"/>
+    <rect x="140" y="90" width="8" height="110"/>
+  </g>
+  <g stroke="#555" stroke-width="1" fill="none">
+    <path d="M180 60 Q220 40 260 80 T340 60" />
+    <path d="M180 120 Q220 100 260 140 T340 120" />
+    <path d="M180 180 Q220 160 260 200 T340 180" />
+  </g>
+  <text x="260" y="128" text-anchor="middle" font-family="monospace" font-size="14" fill="#a0a0a0" letter-spacing="2">IPSW</text>
+  <text x="20" y="220" font-family="monospace" font-size="10" fill="#686868" letter-spacing="2">PROJECT / 004</text>
+</svg>

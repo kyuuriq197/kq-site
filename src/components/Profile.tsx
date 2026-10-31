@@ -16,6 +16,7 @@ export function Profile() {
             <span className="mono">↗</span>
           </div>
           <h3>{p.name}</h3>
+          <img className="project-preview" src={p.preview} alt={p.name} />
           <p>{p.description}</p>
           {i === 0 ? (
             <div className="preview"><span>PROJECT PREVIEW / REAL SCREENSHOT</span></div>
