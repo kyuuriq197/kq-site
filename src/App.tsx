@@ -4,6 +4,7 @@ import { EntryScreen } from './components/EntryScreen';
 import { Profile } from './components/Profile';
 import { Snowfall } from './components/Snowfall';
 import { Toast } from './components/Toast';
+import { Cursor } from './components/Cursor';
 
 import { useEffect } from 'react';
 
@@ -31,6 +32,7 @@ export default function App() {
 
   return (
     <>
+      <Cursor />
       <div className="bg" style={{ backgroundImage: `url(${profile.background})` }} aria-hidden="true" />
       <div className="bg-overlay" aria-hidden="true" />
       <Snowfall enabled={profile.effects.snowfall} />
