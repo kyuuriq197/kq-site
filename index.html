@@ -9,10 +9,7 @@
 </head>
 <body>
 
-    <!-- Фоновое видео (замени bg.mp4 на свой файл) -->
-    <video class="bg-video" autoplay muted loop playsinline poster="bg.jpg">
-        <source src="bg.mp4" type="video/mp4">
-    </video>
+    <!-- Фон (используется аватарная картинка; при желании замени на видео bg.mp4) -->
     <div class="bg-overlay" aria-hidden="true"></div>
 
     <!-- Снег -->
@@ -22,7 +19,7 @@
         <section class="card" aria-label="Профиль">
 
             <div class="avatar-wrap">
-                <img class="avatar" src="avatar.webp" alt="Аватар" onerror="this.src='bg.jpg'">
+                <img class="avatar" src="avatar.png" alt="Аватар" onerror="this.src='bg.png'">
                 <span class="status" title="онлайн"></span>
             </div>
 
@@ -39,14 +36,17 @@
                     <span class="link-icon">✈</span>
                     <span>Telegram</span>
                 </a>
+                <a class="link" href="https://steamcommunity.com/id/kyuuriq" target="_blank" rel="noopener">
+                    <span class="link-icon">🎮</span>
+                    <span>Steam</span>
+                </a>
             </div>
 
             <div class="music">
-                <audio id="audio" src="music.mp3" loop preload="none"></audio>
-                <button class="music-btn" id="musicBtn" type="button" aria-pressed="false">
+                <a class="music-btn" href="https://link.rpluslb.ru/u_are_my_sun" target="_blank" rel="noopener">
                     <span class="music-icon">♪</span>
-                    <span id="musicLabel">включить музыку</span>
-                </button>
+                    <span>u are my sun — keijo</span>
+                </a>
             </div>
 
             <div class="stats">
@@ -58,7 +58,7 @@
 
         <footer>
             © 2026 kyuuriq
-            <small class="credit">фон — <a href="https://commons.wikimedia.org/wiki/File:Path_in_a_Foggy_Forest_(50874611502).jpg" target="_blank" rel="noopener">Tero Karppinen</a>, CC BY 2.0</small>
+            <small class="credit">фон — wallhaven (vp2dxl)</small>
         </footer>
     </main>
 
