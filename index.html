@@ -44,13 +44,19 @@
                     <span class="link-icon">🎮</span>
                     <span>Steam</span>
                 </a>
+                <a class="link" href="https://t.me/deadonshy" target="_blank" rel="noopener">
+                    <span class="link-icon">🎵</span>
+                    <span>Telegram исполнителя</span>
+                </a>
             </div>
 
             <div class="music">
-                <a class="music-btn" href="https://link.rpluslb.ru/u_are_my_sun" target="_blank" rel="noopener">
+                <audio id="audio" src="music.aac" preload="none"></audio>
+                <button class="music-btn" id="musicBtn" type="button" aria-pressed="false">
                     <span class="music-icon">♪</span>
-                    <span>u are my sun — keijo</span>
-                </a>
+                    <span id="musicLabel">celujte monitory — keijo</span>
+                </button>
+                <a class="music-link" href="https://link.rpluslb.ru/u_are_my_sun" target="_blank" rel="noopener">smart-линк</a>
             </div>
 
             <div class="stats">
@@ -119,7 +125,7 @@
                         audio.pause();
                         btn.setAttribute('aria-pressed', 'false');
                         btn.classList.remove('playing');
-                        label.textContent = 'включить музыку';
+                        label.textContent = 'celujte monitory — keijo';
                     }
                 } catch (e) {
                     label.textContent = 'не удалось воспроизвести';
