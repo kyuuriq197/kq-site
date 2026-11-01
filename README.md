@@ -1,6 +1,8 @@
-# kyuuriq profile
+# kyuuriq — portfolio
 
-Персональный сайт-профиль в стиле guns.lol, реализованный на React + Vite + TypeScript.
+Персональный сайт-портфолио на React 19 + Vite + TypeScript.
+Оформление: Google Pixel UI / Material You / Material Design 3 (Material 3 Expressive),
+компоненты — [Material Web](https://github.com/material-components/material-web) (`md-*` элементы).
 
 ## Установка
 
@@ -8,7 +10,7 @@
 pnpm install
 ```
 
-## Запуск dev-сервера
+## Dev-сервер
 
 ```bash
 pnpm dev
@@ -20,28 +22,32 @@ pnpm dev
 
 ```bash
 pnpm build
+pnpm preview
 ```
 
-## Настройка
+## Контент
 
-Отредактируй `src/config/profile.ts`:
+Все данные сайта — в `src/config/profile.ts`:
 
-- username, handle, bio, uid
-- avatar, background
-- theme (accent, socialColor)
-- effects (snowfall, animations, glow, parallax)
-- socialLinks (id, platform, label, url, enabled)
-- copyButtons (discord, telegram)
-- music (enabled, source, title)
-- views (enabled, mode, backendUrl)
+- `username`, `github` — профиль;
+- `projects[]` — реальные репозитории (название, описание, язык, категория, превью, ссылка).
+
+Превью проектов лежат в `public/previews/`.
+
+## Темы и цвета
+
+- Светлая и тёмная темы, переключение через `data-theme` на `<html>`, выбор сохраняется в `localStorage`.
+- Цветовые роли Material 3 заданы CSS-переменными `--md-sys-color-*` в `src/index.css`.
 
 ## Публикация
 
-Загрузи содержимое `dist/` на любой статический хостинг (GitHub Pages, Vercel, Netlify, Cloudflare Pages).
+Собери проект и загрузи содержимое `dist/` на любой статический хостинг
+(GitHub Pages, Vercel, Netlify, Cloudflare Pages).
 
 ## Структура
 
-- `src/config/profile.ts` — конфигурация
-- `src/components/` — компоненты
-- `src/App.tsx` — корневой компонент
-- `public/` — статические ассеты (avatar.png, bg.png, music.mp3, favicon.svg)
+- `src/App.tsx` — композиция страницы;
+- `src/components/` — TopBar, NavRail, BottomNav, ProjectCard, QuickSettings, ThemeToggle, EntryScreen;
+- `src/config/profile.ts` — данные профиля и проектов;
+- `src/index.css` — дизайн-токены, темы, компоненты, адаптивность, анимации;
+- `public/` — favicon, robots.txt, превью проектов.

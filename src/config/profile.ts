@@ -9,15 +9,13 @@ export interface Project {
 
 export interface ProfileConfig {
   username: string;
-  avatar: string;
-  background: string;
+  github: string;
   projects: Project[];
 }
 
 export const profile: ProfileConfig = {
   username: 'kyuuriq',
-  avatar: '/avatar.jpg',
-  background: '/bg.png',
+  github: 'https://github.com/kyuuriq197',
   projects: [
     {
       name: 'kyuuriqstats',
@@ -25,7 +23,7 @@ export const profile: ProfileConfig = {
       url: 'https://github.com/kyuuriq197/kyuuriqstats',
       language: 'Rust',
       category: 'CLI',
-      preview: 'https://opengraph.githubassets.com/1/kyuuriq197/kyuuriqstats'
+      preview: '/previews/kyuuriqstats.svg'
     },
     {
       name: 'kyuuriq-esp32',
@@ -33,7 +31,7 @@ export const profile: ProfileConfig = {
       url: 'https://github.com/kyuuriq197/kyuuriq-esp32',
       language: 'C++',
       category: 'Embedded',
-      preview: 'https://opengraph.githubassets.com/1/kyuuriq197/kyuuriq-esp32'
+      preview: '/previews/kyuuriq-esp32.svg'
     },
     {
       name: 'kqkernel_arm64',
@@ -41,7 +39,7 @@ export const profile: ProfileConfig = {
       url: 'https://github.com/kyuuriq197/kqkernel_arm64',
       language: 'Rust',
       category: 'Systems',
-      preview: 'https://opengraph.githubassets.com/1/kyuuriq197/kqkernel_arm64'
+      preview: '/previews/kqkernel_arm64.svg'
     },
     {
       name: 'iphone14-5-ios-27-2-ipsw-analysis',
@@ -49,7 +47,7 @@ export const profile: ProfileConfig = {
       url: 'https://github.com/kyuuriq197/iphone14-5-ios-27-2-ipsw-analysis',
       language: 'Python',
       category: 'Research',
-      preview: 'https://opengraph.githubassets.com/1/kyuuriq197/iphone14-5-ios-27-2-ipsw-analysis'
+      preview: '/previews/ipsw-analysis.svg'
     },
     {
       name: 'my-rice-',
@@ -57,7 +55,7 @@ export const profile: ProfileConfig = {
       url: 'https://github.com/kyuuriq197/my-rice-',
       language: 'Config',
       category: 'Linux',
-      preview: 'https://opengraph.githubassets.com/1/kyuuriq197/my-rice-'
+      preview: '/previews/my-rice.svg'
     }
   ]
 };
