@@ -1,17 +1,55 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 240" width="400" height="240">
-  <rect width="400" height="240" fill="#111"/>
-  <g fill="#303030">
-    <rect x="40" y="40" width="120" height="80" rx="2"/>
-    <rect x="180" y="40" width="80" height="40" rx="2"/>
-    <rect x="280" y="40" width="80" height="40" rx="2"/>
-    <rect x="180" y="100" width="180" height="40" rx="2"/>
-    <rect x="40" y="140" width="320" height="60" rx="2"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 720" role="img" aria-label="my-rice- — Linux desktop configuration preview">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#e3e9fb"/>
+      <stop offset="0.55" stop-color="#edf0fb"/>
+      <stop offset="1" stop-color="#f4eefc"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1200" height="720" fill="url(#bg)"/>
+
+  <!-- soft shapes -->
+  <circle cx="1090" cy="150" r="160" fill="#ffe3cf"/>
+  <circle cx="100" cy="130" r="120" fill="#d6dcf8"/>
+
+  <!-- desktop wall -->
+  <rect x="110" y="110" width="980" height="500" rx="48" fill="#242a52"/>
+  <rect x="132" y="132" width="936" height="456" rx="36" fill="none" stroke="#3d4577" stroke-width="3" opacity="0.8"/>
+
+  <!-- panel -->
+  <rect x="168" y="164" width="864" height="54" rx="27" fill="#181c3a"/>
+  <circle cx="198" cy="191" r="12" fill="#8fb7f0"/>
+  <circle cx="234" cy="191" r="12" fill="#7fd8a6"/>
+  <circle cx="270" cy="191" r="12" fill="#b3a1f2"/>
+  <rect x="320" y="182" width="176" height="18" rx="9" fill="#3d4577"/>
+
+  <!-- floating tiles -->
+  <rect x="430" y="256" width="430" height="290" rx="34" fill="#315da8"/>
+  <rect x="462" y="288" width="366" height="70" rx="20" fill="#4a6fc0"/>
+  <rect x="462" y="382" width="240" height="16" rx="8" fill="#b8c9ee"/>
+  <rect x="462" y="422" width="310" height="16" rx="8" fill="#b8c9ee"/>
+  <rect x="462" y="462" width="186" height="16" rx="8" fill="#9db4e6"/>
+
+  <rect x="700" y="380" width="330" height="166" rx="26" fill="#7e5fc0"/>
+  <rect x="730" y="410" width="270" height="16" rx="8" fill="#e2d7f6"/>
+  <rect x="730" y="450" width="210" height="16" rx="8" fill="#d3c4f2"/>
+  <rect x="730" y="490" width="140" height="16" rx="8" fill="#c0adeb"/>
+
+  <!-- dock -->
+  <rect x="168" y="600" width="470" height="72" rx="24" fill="#181c3a"/>
+  <rect x="192" y="620" width="34" height="34" rx="10" fill="#7fd8a6"/>
+  <rect x="242" y="620" width="34" height="34" rx="10" fill="#8fb7f0"/>
+  <rect x="292" y="620" width="34" height="34" rx="10" fill="#b3a1f2"/>
+  <rect x="342" y="620" width="34" height="34" rx="10" fill="#f6c98f"/>
+  <rect x="392" y="620" width="34" height="34" rx="10" fill="#4a6fc0"/>
+  <rect x="442" y="620" width="34" height="34" rx="10" fill="#7e5fc0"/>
+
+  <!-- accent chips -->
+  <g transform="translate(660 60)">
+    <rect width="150" height="44" rx="22" fill="#315da8"/>
+    <rect x="34" y="15" width="82" height="14" rx="7" fill="#dfe8ff"/>
   </g>
-  <g fill="#555">
-    <rect x="50" y="50" width="40" height="4" rx="1"/>
-    <rect x="50" y="60" width="60" height="4" rx="1"/>
-    <rect x="50" y="70" width="30" height="4" rx="1"/>
-  </g>
-  <text x="200" y="220" text-anchor="middle" font-family="monospace" font-size="12" fill="#a0a0a0" letter-spacing="2">LINUX RICE</text>
-  <text x="20" y="220" font-family="monospace" font-size="10" fill="#686868" letter-spacing="2">PROJECT / 005</text>
+  <circle cx="1010" cy="640" r="46" fill="#7fd8a6"/>
+  <circle cx="1032" cy="622" r="30" fill="#a5e8c4"/>
 </svg>

@@ -47,7 +47,7 @@ pnpm preview
 ## Структура
 
 - `src/App.tsx` — композиция страницы;
-- `src/components/` — TopBar, NavRail, BottomNav, ProjectCard, QuickSettings, ThemeToggle, EntryScreen;
+- `src/components/` — TopBar, BottomNav, EntryScreen, Snackbar, ThemeToggle, ProjectCard, FilterChips;
 - `src/config/profile.ts` — данные профиля и проектов;
 - `src/index.css` — дизайн-токены, темы, компоненты, адаптивность, анимации;
 - `public/` — favicon, robots.txt, превью проектов.

@@ -1,12 +1,59 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 240" width="400" height="240">
-  <rect width="400" height="240" fill="#111"/>
-  <g fill="#303030">
-    <circle cx="20" cy="20" r="1.5"/><circle cx="40" cy="20" r="1.5"/><circle cx="60" cy="20" r="1.5"/><circle cx="80" cy="20" r="1.5"/><circle cx="100" cy="20" r="1.5"/>
-    <circle cx="20" cy="40" r="1.5"/><circle cx="40" cy="40" r="1.5"/><circle cx="60" cy="40" r="1.5"/><circle cx="80" cy="40" r="1.5"/><circle cx="100" cy="40" r="1.5"/>
-    <circle cx="20" cy="60" r="1.5"/><circle cx="40" cy="60" r="1.5"/><circle cx="60" cy="60" r="1.5"/><circle cx="80" cy="60" r="1.5"/><circle cx="100" cy="60" r="1.5"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 720" role="img" aria-label="kyuuriqstats — CLI statistics project preview">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#dfeaff"/>
+      <stop offset="0.6" stop-color="#e9f2ff"/>
+      <stop offset="1" stop-color="#eef5ff"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1200" height="720" fill="url(#bg)"/>
+
+  <!-- soft background shapes -->
+  <circle cx="955" cy="120" r="190" fill="#c9daff" opacity="0.55"/>
+  <circle cx="140" cy="640" r="150" fill="#d8efe2" opacity="0.5"/>
+  <circle cx="1090" cy="580" r="76" fill="#e7e1ff" opacity="0.7"/>
+  <rect x="60" y="80" width="96" height="96" rx="28" transform="rotate(-14 108 128)" fill="#ffffff" opacity="0.5"/>
+  <rect x="700" y="90" width="64" height="64" rx="20" transform="rotate(18 732 122)" fill="#d2e7ff"/>
+
+  <!-- terminal window -->
+  <rect x="90" y="150" width="620" height="430" rx="36" fill="#202a4c"/>
+  <rect x="90" y="150" width="620" height="430" rx="36" fill="none" stroke="#3a4a7c" stroke-width="2" opacity="0.6"/>
+  <circle cx="150" cy="206" r="11" fill="#82a8ff"/>
+  <circle cx="186" cy="206" r="11" fill="#7fd8a6"/>
+  <circle cx="222" cy="206" r="11" fill="#b39cf7"/>
+  <rect x="252" y="198" width="180" height="16" rx="8" fill="#43507e"/>
+
+  <!-- prompt line -->
+  <polygon points="150,296 176,316 150,336" fill="#7fd8a6"/>
+  <rect x="196" y="304" width="300" height="22" rx="11" fill="#dfe8ff"/>
+  <rect x="150" y="372" width="420" height="14" rx="7" fill="#4a5891"/>
+  <rect x="150" y="410" width="330" height="14" rx="7" fill="#4a5891"/>
+  <rect x="150" y="448" width="376" height="14" rx="7" fill="#3d4a7e"/>
+  <rect x="150" y="504" width="18" height="26" rx="4" fill="#8fdcb0">
+    <animate attributeName="opacity" values="1;0.15;1" dur="1.6s" repeatCount="indefinite"/>
+  </rect>
+
+  <!-- stats card overlapping terminal -->
+  <g transform="translate(620 300)">
+    <rect width="460" height="300" rx="32" fill="#ffffff"/>
+    <rect width="460" height="300" rx="32" fill="none" stroke="#c9daff" stroke-width="2"/>
+    <rect x="36" y="34" width="120" height="18" rx="9" fill="#b9cdf3"/>
+    <rect x="36" y="252" width="388" height="6" rx="3" fill="#dfe8ff"/>
+    <rect x="60"  y="196" width="44" height="56"  rx="10" fill="#82a8ff"/>
+    <rect x="132" y="156" width="44" height="96"  rx="10" fill="#9fc1ff"/>
+    <rect x="204" y="116" width="44" height="136" rx="10" fill="#5b7bd8"/>
+    <rect x="276" y="86"  width="44" height="166" rx="10" fill="#315da8"/>
+    <rect x="348" y="52"  width="44" height="200" rx="10" fill="#7fd8a6"/>
   </g>
-  <circle cx="200" cy="120" r="60" fill="none" stroke="#303030" stroke-width="1"/>
-  <circle cx="200" cy="120" r="40" fill="none" stroke="#555" stroke-width="1" stroke-dasharray="4 4"/>
-  <text x="200" y="128" text-anchor="middle" font-family="monospace" font-size="14" fill="#a0a0a0" letter-spacing="2">CLI</text>
-  <text x="20" y="220" font-family="monospace" font-size="10" fill="#686868" letter-spacing="2">PROJECT / 001</text>
+
+  <!-- floating chips -->
+  <g transform="translate(760 236)">
+    <rect width="150" height="46" rx="23" fill="#315da8"/>
+    <rect x="52" y="16" width="52" height="14" rx="7" fill="#dfe8ff"/>
+  </g>
+  <g transform="translate(948 700)">
+    <rect width="128" height="40" rx="20" fill="#d8f2df"/>
+    <rect x="24" y="14" width="80" height="12" rx="6" fill="#55a77b"/>
+  </g>
 </svg>

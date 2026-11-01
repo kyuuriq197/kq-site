@@ -1,14 +1,72 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 240" width="400" height="240">
-  <rect width="400" height="240" fill="#111"/>
-  <g stroke="#303030" stroke-width="1" fill="none">
-    <rect x="120" y="60" width="160" height="120" rx="4"/>
-    <rect x="140" y="80" width="120" height="80" rx="2"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 720" role="img" aria-label="kyuuriq-esp32 — embedded firmware for ESP32 preview">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#ddf2e9"/>
+      <stop offset="0.55" stop-color="#e8f7f1"/>
+      <stop offset="1" stop-color="#eff8f3"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1200" height="720" fill="url(#bg)"/>
+
+  <!-- soft shapes -->
+  <circle cx="1010" cy="140" r="170" fill="#c9ead9"/>
+  <circle cx="110" cy="620" r="130" fill="#cee6f5"/>
+  <rect x="66" y="100" width="84" height="84" rx="24" transform="rotate(12 108 142)" fill="#b9efcb" opacity="0.8"/>
+  <circle cx="640" cy="86" r="52" fill="#ffffff" opacity="0.55"/>
+
+  <!-- board -->
+  <rect x="110" y="180" width="980" height="390" rx="44" fill="#173b34"/>
+  <rect x="128" y="198" width="944" height="354" rx="34" fill="none" stroke="#2f6f60" stroke-width="3" opacity="0.8"/>
+
+  <!-- wifi arcs -->
+  <g transform="translate(960 250)" fill="none" stroke-linecap="round">
+    <path d="M0 0 m-64 34 a76 76 0 0 1 128 0" stroke="#ffd28a" stroke-width="16"/>
+    <path d="M0 0 m-40 56 a52 52 0 0 1 80 0" stroke="#fedfae" stroke-width="16"/>
+    <path d="M0 0 m-16 76 a24 24 0 0 1 32 0" stroke="#7fd8a6" stroke-width="16"/>
   </g>
-  <g fill="#303030">
-    <circle cx="160" cy="100" r="2"/><circle cx="180" cy="100" r="2"/><circle cx="200" cy="100" r="2"/><circle cx="220" cy="100" r="2"/><circle cx="240" cy="100" r="2"/>
-    <circle cx="160" cy="120" r="2"/><circle cx="180" cy="120" r="2"/><circle cx="200" cy="120" r="2"/><circle cx="220" cy="120" r="2"/><circle cx="240" cy="120" r="2"/>
-    <circle cx="160" cy="140" r="2"/><circle cx="180" cy="140" r="2"/><circle cx="200" cy="140" r="2"/><circle cx="220" cy="140" r="2"/><circle cx="240" cy="140" r="2"/>
+
+  <!-- chip -->
+  <g transform="translate(488 300)">
+    <rect x="-24" y="-8" width="268" height="156" rx="26" fill="#2f7d6d"/>
+    <rect x="8" y="24" width="200" height="92" rx="18" fill="#56c1a6"/>
+    <rect x="34" y="46" width="148" height="48" rx="12" fill="#234f45"/>
   </g>
-  <text x="200" y="195" text-anchor="middle" font-family="monospace" font-size="14" fill="#a0a0a0" letter-spacing="2">ESP32</text>
-  <text x="20" y="220" font-family="monospace" font-size="10" fill="#686868" letter-spacing="2">PROJECT / 002</text>
+
+  <!-- chip pins -->
+  <g fill="#7fd8a6">
+    <rect x="392" y="322" width="66" height="18" rx="9"/>
+    <rect x="392" y="352" width="66" height="18" rx="9"/>
+    <rect x="392" y="382" width="66" height="18" rx="9"/>
+    <rect x="392" y="412" width="66" height="18" rx="9"/>
+    <rect x="742" y="322" width="66" height="18" rx="9"/>
+    <rect x="742" y="352" width="66" height="18" rx="9"/>
+    <rect x="742" y="382" width="66" height="18" rx="9"/>
+    <rect x="742" y="412" width="66" height="18" rx="9"/>
+  </g>
+
+  <!-- usb + leds -->
+  <rect x="150" y="468" width="118" height="52" rx="12" fill="#cde2da"/>
+  <circle cx="300" cy="494" r="12" fill="#7fd8a6"/>
+  <circle cx="338" cy="494" r="12" fill="#8ab6f9"/>
+
+  <!-- gpio header -->
+  <g fill="#0f2e28" stroke="#56c1a6" stroke-width="3">
+    <circle cx="250" cy="240" r="9"/>
+    <circle cx="294" cy="240" r="9"/>
+    <circle cx="338" cy="240" r="9"/>
+    <circle cx="382" cy="240" r="9"/>
+    <circle cx="426" cy="240" r="9"/>
+    <circle cx="470" cy="240" r="9"/>
+  </g>
+
+  <!-- floating tags -->
+  <g transform="translate(160 120)">
+    <rect width="168" height="48" rx="24" fill="#ffffff"/>
+    <rect x="18" y="17" width="132" height="14" rx="7" fill="#2f7d6d"/>
+  </g>
+  <g transform="translate(880 640)">
+    <rect width="150" height="44" rx="22" fill="#2f7d6d"/>
+    <rect x="34" y="15" width="82" height="14" rx="7" fill="#d8f2df"/>
+  </g>
 </svg>
